@@ -1,0 +1,71 @@
+img{
+    display: block;
+    width: 100%;
+}
+.box {
+    width: 1600px;
+    height: 247px;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.box1 {
+    width: 354px;
+    height: 247px;
+    /*background: url("../images/1.jpg") no-repeat center center;*/
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.box2 {
+    width: 354px;
+    height: 247px;
+    background: url("../images/1.jpg") no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 430px;
+    top: 0;
+}
+
+.box3 {
+    width: 354px;
+    height: 247px;
+    background: url("../images/1.jpg") no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 860px;
+    top: 0;
+}
+
+/*.box1.active {
+    width: 354px;
+    height: 247px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../images/1.gif") no-repeat center center;
+    background-size: 100% 100%;
+}*/
+
+.box2:hover {
+    width: 354px;
+    height: 247px;
+    position: absolute;
+    left: 430px;
+    top: 0;
+    background: url("../images/1.gif") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+/*.box3.active {
+    width: 354px;
+    height: 247px;
+    position: absolute;
+    left: 860px;
+    top: 0;
+    background: url("../images/1.gif") no-repeat center center;
+    background-size: 100% 100%;
+}
+*/

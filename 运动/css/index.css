@@ -1,0 +1,18 @@
+html,body{
+	margin: 0;
+	padding:0;
+}
+.box{
+	width: 1920px;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+}
+.list{
+	width: 100000px;
+	height: 150px;
+	background: #f00;
+	position: absolute;
+	left: 0;
+	top: 0;
+}

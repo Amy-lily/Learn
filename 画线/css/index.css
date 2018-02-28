@@ -1,0 +1,236 @@
+body {
+    background: #000;
+}
+
+.box-3 {
+    width: 718px;
+    height: 668px;
+    background: url(../images/1.png) center center no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    margin: 150px;
+}
+
+.box1-3,
+.box2-3,
+.box3-3,
+.box4-3 {
+    width: 34px;
+    height: 34px;
+    /*background: #f00;*/
+}
+             
+.box1-3 {
+    width: 717px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    overflow: hidden;
+}
+
+.box1img {
+    width: 116px;
+    height: 34px;
+    background: url(../images/2.png) center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: -116px;
+    top: -17px;
+    z-index: 99;
+}
+
+.box2-3 {
+    height: 738px;
+    transform: rotate(26.3deg);
+    position: absolute;
+    left: 548px;
+    top: -30px;
+    overflow: hidden;
+}
+
+.box2img {
+    width: 116px;
+    height: 34px;
+    transform: rotate(90deg);
+    background: url(../images/2.png) center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: -53px;
+    top: -69px;
+    z-index: 99;
+}
+
+.box3-3 {
+    width: 373px;
+    position: absolute;
+    left: 13px;
+    top: 665px;
+    overflow: hidden;
+}
+.box3img {
+    width: 116px;
+    height: 34px;
+    /*transform: rotate(90deg);*/
+    background: url(../images/2.png) center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 348px;
+    top: -17px;
+    z-index: 99;
+}
+.box4-3 {
+    height: 654px;
+    position: absolute;
+    left: -17px;
+    top: 0;
+    overflow: hidden;
+}
+.box4img {
+    width: 116px;
+    height: 34px;
+    transform: rotate(90deg);
+    background: url(../images/2.png) center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: -38px;
+    top: 677px;
+    z-index: 99;
+}
+
+/*内容宽度延伸*/
+
+@-webkit-keyframes lineWidth1 {
+	0%,5%{
+		opacity: 0;
+	}
+
+    5%{
+    	opacity: 1;
+    }
+    55%{
+		opacity: 0.1;
+	}
+    0% {
+        left: -116px;
+    }
+    100% {
+        left: 2868px;
+    }
+}
+
+
+/*@keyframes lineWidth {
+    0% {
+        width: 0%;
+    }
+    
+    100% {
+        width: 100%;
+    }
+}*/
+
+.lineWidth1 {
+    -webkit-animation-name: lineWidth1;
+    animation-name: lineWidth1;
+    animation-duration: 8s;
+    -webkit-animation-duration: 8s;
+    animation-timing-function:linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes lineWidth2 {
+	0%,5%{
+		opacity: 0;
+	}
+	
+    5%{
+    	opacity: 1;
+    }
+    55%{
+		opacity: 0.1;
+	}
+    0% {
+        left: -53px;
+        top: -69px;
+    }
+    100% {
+        left: -53px;
+        top: 2952px;
+    }
+}
+
+.lineWidth2 {
+    -webkit-animation-name: lineWidth2;
+    animation-name: lineWidth2;
+    animation-duration: 8s;
+    -webkit-animation-duration: 8s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    /* Safari 和 Chrome */
+}
+@-webkit-keyframes lineWidth3 {
+	0%,14%{
+		opacity: 0;
+	}
+	
+    14%{
+    	opacity: 1;
+    }
+    23%{
+		opacity: 0.1;
+	}
+    0% {
+        left: 348px;
+    	top: -17px;
+    }
+    100% {
+        left: -1392px;
+    	top: -17px;
+    }
+}
+
+.lineWidth3 {
+    -webkit-animation-name: lineWidth3;
+    animation-name: lineWidth3;
+    animation-duration: 8s;
+    -webkit-animation-duration: 8s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+    /* Safari 和 Chrome */
+}
+@-webkit-keyframes lineWidth4 {
+	0%,5%{
+		opacity: 0;
+	}
+	
+    5%{
+    	opacity: 1;
+    }
+    35%{
+		opacity: 0.1;
+	}
+    0% {
+        left: -38px;
+    top: 677px;
+    }
+    100% {
+        left: -38px;
+    top: -2632px;
+    }
+}
+
+.lineWidth4 {
+    -webkit-animation-name: lineWidth4;
+    animation-name: lineWidth4;
+    animation-duration: 8s;
+    -webkit-animation-duration: 8s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-delay: 6s;
+    -webkit-animation-delay: 6s;
+    /* Safari 和 Chrome */
+}
