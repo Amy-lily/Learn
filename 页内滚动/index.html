@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>页内滚动</title>
+    <style>
+    .lylx-yngd-left {
+        width: 386px;
+        height: 480px;
+        background: #feefef;
+        position: absolute;
+        top: 70px;
+        left: 27px;
+        overflow: hidden;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .lylx-yngd-left h2 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        background: #e1d6d6;
+        text-align: center;
+        font-size: 18px;
+        color: #000;
+        font-family: "微软雅黑";
+        margin-top: 43px;
+    }
+
+    .lylx-cywt-box {
+        width: 332px;
+        height: 328px;
+        max-height: 328px;
+        margin-top: 20px;
+        margin-left: 40px;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .lylx-lyitem {
+        width: 303px;
+        height: 80px;
+        overflow: hidden;
+        border-bottom: 1px solid #aea6a6;
+    }
+
+
+    .lylx-lyitem span {
+        display: block;
+        font-size: 16px;
+        color: #cb2021;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .lylx-lyitem p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #000000;
+        font-family: "黑体";
+        font-weight: bold;
+    }
+
+    .nicescroll-rails {
+        width: 1px !important;
+        opacity: 1!important;
+        background: #535353;
+    }
+
+    .nicescroll-cursors {
+        left: 2px !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="lylx-yngd-left">
+        <h2>和你一样有创业梦想的人都在问这些</h2>
+        <div class="lylx-cywt-box" id="lylx-cywt-box">
+            <div class="lylx-lyitem">
+                <span>张**</span>
+                <p>在二线城市好卖吗？</p>
+            </div>
+            <div class="lylx-lyitem">
+                <span>李**</span>
+                <p>开店的话，前期费用大概是多少？</p>
+            </div>
+            <div class="lylx-lyitem">
+                <span>张**</span>
+                <p>炸鸡的口味多不多？</p>
+            </div>
+            <div class="lylx-lyitem">
+                <span>金**</span>
+                <p>公司总部在哪里？</p>
+            </div>
+            <div class="lylx-lyitem">
+                <span>王**</span>
+                <p>创业店也有饮品吗？</p>
+            </div>
+            <div class="lylx-lyitem">
+                <span>宣**</span>
+                <p>一个人创业的话能干吗？</p>
+            </div>
+            <div class="lylx-lyitem">
+                <span>马**</span>
+                <p>想在学校周边开一个，好卖吗？</p>
+            </div>
+            <div class="lylx-lyitem">
+                <span>张**</span>
+                <p>进行考察的话怎么去？</p>
+            </div>
+            <div class="lylx-lyitem">
+                <span>贾**</span>
+                <p>利润空间大不大？</p>
+            </div>
+            <div class="lylx-lyitem">
+                <span>魏**</span>
+                <p>装修是自己装还是总部给装？</p>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-1.10.1.min.js"></script>
+    <script src="jquery.nicescroll.js"></script>
+    <script>
+    $(window).ready(function() {
+        $('#lylx-cywt-box').niceScroll({
+            cursorcolor: "#cb2021", //#CC0071 光标颜色
+            cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+            touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+            cursorwidth: "5px", //像素光标的宽度
+            cursorborder: "2px", // 游标边框css定义
+            cursorborderradius: "5px", //以像素为光标边界半径
+            autohidemode: false //是否隐藏滚动条
+        });
+    })
+    </script>
+</body>
+
+</html>
