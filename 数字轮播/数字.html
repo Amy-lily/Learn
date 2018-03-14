@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数字轮播</title>
+	<style>
+		.num-box{
+
+		}
+		.num-box span{
+			display: block;
+			width: 23px;
+			height: 23px;
+			float: left;
+			background: #f0f;
+			margin-left: 5px;
+			background: url(number.png) no-repeat center center;
+			background-position: 0 0;
+		}
+		/*.num-box .num1{
+			background-position: 0 -30px;
+		}
+		.num-box .num2{
+			background-position: 0 -60px;
+		}
+		.num-box .num3{
+			background-position: 0 -90px;
+		}
+		.num-box .num4{
+			background-position: 0 -120px;
+		}
+		.num-box .num5{
+			background-position: 0 -150px;
+		}
+		.num-box .num6{
+			background-position: 0 -180px;
+		}
+		.num-box .num7{
+			background-position: 0 -210px;
+		}
+		.num-box .num8{
+			background-position: 0 -240px;
+		}
+		.num-box .num9{
+			background-position: 0 -270px;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<span>下载量：</span>
+		<div class="num-box">
+			<span class="num0"></span>
+			<span class="num1"></span>
+			<span class="num2"></span>
+			<span class="num3"></span>
+			<span class="num4"></span>
+			<span class="num5"></span>
+			<span class="num6"></span>
+			<span class="num7"></span>
+			<span class="num8"></span>
+			<span class="num9"></span>
+		</div>
+		<span>次</span>
+	</div>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".num0").animate({backgroundPositionY:"0px"},2000);
+			$(".num1").animate({backgroundPositionY:"-30px"},2000);
+			$(".num2").animate({backgroundPositionY:"-60px"},2000);
+			$(".num3").animate({backgroundPositionY:"-90px"},2000);
+			$(".num4").animate({backgroundPositionY:"-120px"},2000);
+			$(".num5").animate({backgroundPositionY:"-150px"},2000);
+			$(".num6").animate({backgroundPositionY:"-180px"},2000);
+			$(".num7").animate({backgroundPositionY:"-210px"},2000);
+			$(".num8").animate({backgroundPositionY:"-240px"},2000);
+			$(".num9").animate({backgroundPositionY:"-270px"},2000);
+		})
+	</script>
+</body>
+</html>
