@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>丸茶一派</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="wap-font-scale" content="no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta itemprop="name" content="丸茶一派手机资料官网">
+    <meta itemprop="description" content="丸茶一派一个以幻彩珍珠奶茶为主打，包含各种台湾美食的时尚健康餐饮品牌。">
+    <meta itemprop="image" content="http://zl.qudaosujian.com/m/wanchayipai/images/wx300.jpg">
+    <!-- 微信分享  -->
+    <link rel="stylesheet" type="text/css" href="libs/css/reset.css">
+    <link href="css/app.css" rel="stylesheet">
+    <script type="text/javascript">
+    ! function(a) {
+        function b() {
+            var b = a.document,
+                c = b.documentElement,
+                d = c.getBoundingClientRect().width;
+            document.documentElement.style.fontSize = 20 * (d / 375) + "px"
+        }
+        window.addEventListener("DOMContentLoaded", function() {
+            b()
+        }, !1), window.addEventListener("resize", function() {
+            b()
+        }), b()
+    }(window);
+    </script>
+</head>
+
+<body>
+    <div class="loading">
+        <img src="images/loading.gif" />
+    </div>
+    <div id="main">
+        <div class="curr_one warp1"></div>
+        <div class="video_fix">
+            <div class="video_cont warp">
+                <video id="video_load" class="video_load" src="http://7xjv99.media1.z0.glb.clouddn.com/wanchayipai/wancha-zdf.mp4" preload="auto" x-webkit-airplay="true" playsinline="true" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"></video>
+            </div>
+        </div>
+        <div class="end warp">
+            <div class="end-img1"></div>
+            <div class="end-img2"></div>
+            <div class="end-img3 scale_btn"></div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://go.163.com/2015/public/common/js/common.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(function() {
+    $(document).bind("touchmove", function(e) {
+        e.preventDefault();
+    });
+
+    //开始预先加载视频
+    document.addEventListener("WeixinJSBridgeReady", function() {
+        $('#video_load')[0].load();
+    }, false);
+    $('#video_load')[0].load();
+
+    function init() {
+        if (netease.ua.ios) {
+            $('.curr_one').hide()
+            $('#video_load')[0].play();
+            setTimeout(function() {
+                $('.end').show()
+            }, 2000)
+            $('#video_load').on('ended', function() {
+                $('.end').show();
+                $('.video_fix').hide();
+            })
+        } else if (netease.ua.android) {
+            $('.curr_one').show()
+            $('.curr_one').on('click', function() {
+                $(this).hide();
+                $('#video_load')[0].play();
+                $('#video_load').on('ended', function() {
+                    $('.end').show();
+                    $('.video_fix').hide();
+                })
+            })
+        }
+        $('.end-img3').on('click', function() {
+            window.location.href = "menu.shtml";
+        })
+
+    }
+
+    //________________________loading_______________________
+    var loadboo = false;
+
+    function loadimg(imgs, callback) {
+        if (!imgs) {
+            return false
+        };
+        var img = [];
+        var len = imgs.length;
+        var loadedCount = 0;
+        for (var i = 0; i < len; i++) {
+            img[i] = new Image();
+            img[i].src = imgs[i];
+            img[i].onload = function() {
+                loadedCount++;
+                if (loadedCount >= len) {
+                    callback ? callback() : null;
+
+                }
+                loadboo = true;
+            };
+        }
+    };
+    var setin = function() {
+        this.percent = 0;
+        interval = setInterval(function() {
+            this.percent += 9;
+            if (this.percent >= 99) {
+                this.percent = 99;
+                if (loadboo) {
+                    $('.load_data').text('100%');
+                    setTimeout(function() {
+                        $('.loading').hide();
+                        init();
+                    }, 500)
+                    clearInterval(this.interval);
+
+                } else {
+                    $('.load_data').text(this.percent + '%');
+                }
+            } else {
+                $('.load_data').text(this.percent + '%');
+            }
+        }, 10);
+    }
+    var img_arr = [
+        'images/loading.gif',
+        'images/3.png',
+        'images/end.jpg',
+    ]
+
+    loadimg(img_arr, init);
+    setin();
+
+}())
+var shareData = {
+    MsgImg: 'http://zl.qudaosujian.com/m/wanchayipai/images/wx300.jpg', //分享图片
+    link: 'http://zl.qudaosujian.com/m/wanchayipai/index.shtml', //分享链接
+    title: '丸茶一派手机资料官网', //分享标题
+    desc: '丸茶一派一个以幻彩珍珠奶茶为主打，包含各种台湾美食的时尚健康餐饮品牌。', //分享描述
+    fText: '丸茶一派一个以幻彩珍珠奶茶为主打，包含各种台湾美食的时尚健康餐饮品牌。', //分享朋友圈
+    callback: function() {
+        share_survey(true);
+    }
+};
+NeteaseShareInit();
+</script>
+
+</html>
